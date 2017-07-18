@@ -1,4 +1,4 @@
-class ssh::config{
+class dnsconfig::config{
   file { '/etc/resolv.conf':
     ensure  => file,
     mode    => '0644',

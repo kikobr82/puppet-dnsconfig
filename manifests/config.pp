@@ -8,5 +8,5 @@ class dnsconfig::config(
     group   => 'root',
     content => template('dnsconfig/resolv.conf.erb')
   }
-notify {"Variable \${domainserv}":}
+notify {"Variable ${domainserv}":}
 }

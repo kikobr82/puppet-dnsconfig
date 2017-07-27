@@ -1,5 +1,5 @@
 class dnsconfig::config(
-#  $domain = $::dnsconfig::domain
+#  $domainserv = $::dnsconfig::domainserv
 ) {
   file { '/etc/resolv.conf':
     ensure  => file,

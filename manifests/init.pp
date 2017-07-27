@@ -1,5 +1,5 @@
 class dnsconfig (
-#  String $domain = $facts['domain'] 
+  String $domainserv = $facts['domain'] 
 ) {
   class { '::dnsconfig::config': } 
 }

@@ -1,9 +1,11 @@
-class dnsconfig::config{
+class dnsconfig::config(
+  $domain = $::dnsconfig::domain
+) {
   file { '/etc/resolv.conf':
     ensure  => file,
     mode    => '0644',
     owner   => 'root',
     group   => 'root',
-    source => 'puppet:///modules/dnsconfig/resolv.conf'
+    content => template('dnsconfig/resolv.conf.erb')
   }
 }

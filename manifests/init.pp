@@ -1,9 +1,5 @@
 class dnsconfig (
-  String $domain = $facts['domain'] ? {
-    'plab.com' => 'plab.com',
-    'jlab.com' => 'jlab.com',
-    default  => 'error',
-  }
+  String $domain = $facts['domain'] 
 ) {
   class { '::dnsconfig::config': } 
 }
